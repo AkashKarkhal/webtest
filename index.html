@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akashdeep Singh | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --white: #ffffff;
+      --gray: #f0f0f0;
+      --text: #1e1e1e;
+      --subtext: #888;
+      --primary: #eaeaea;
+      --shadow: rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--white);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: var(--text);
+      margin: 4px 0;
+      border-radius: 3px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      background: var(--white);
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 10px 20px var(--shadow);
+    }
+
+    .intro-text {
+      max-width: 500px;
+    }
+
+    .intro-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .intro-text p {
+      font-size: 1rem;
+      color: var(--subtext);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: var(--gray);
+      padding: 20px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px var(--shadow);
+    }
+
+    .contact, footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--subtext);
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: var(--white);
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        width: 200px;
+        box-shadow: 0 5px 15px var(--shadow);
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Akashdeep Singh</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="navbar">
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <img src="pic.png" alt="Akashdeep Singh" />
+    <div class="intro-text">
+      <h2>Hi, I'm Akashdeep</h2>
+      <p>A passionate Mobile & Web Application Developer with experience in React Native, JavaScript, and Firebase. I specialize in building modern, scalable, and high-performing mobile applications.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Punjabi University, Patiala</strong> – B.Tech in Computer Science and Engineering (2021–2025) – CGPA: 8.0</li>
+      <li>Govt. Sen. Sec. Smart School, Bhogiwal – Post Matriculation (2020–2021), 84%</li>
+      <li>Shaheed Udham Singh School, Sohian – Matriculation (2019–2020), 75%</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>React Native Developer</strong> – <em>A.A.M Infotech Pvt. Ltd.</em> (Jan 2025 – May 2025)<br>
+        - Built a full-featured e-commerce mobile app with authentication, cart system, and payment integration.<br>
+        - Utilized React Native, Redux, and RESTful APIs to create a seamless user experience.</li><br>
+
+      <li><strong>Software Developer Intern</strong> – <em>Kato Enterprise Pvt. Ltd.</em> (Dec 2023 – Mar 2024)<br>
+        - Developed a mobile app using Java and Firebase with complete user authentication.<br>
+        - Designed the web version using HTML, CSS, and JavaScript for cross-platform access.</li><br>
+
+      <li><strong>Data Visualization Virtual Internship</strong> – <em>Tata Group (Forage)</em> (Dec 2024)<br>
+        - Created business intelligence dashboards and simulated real-world challenges for Tata Consultancy Services.</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card"><strong>Languages:</strong> JavaScript, Java, DSA, OOP</div>
+      <div class="card"><strong>Web:</strong> HTML, CSS, React, API Integration</div>
+      <div class="card"><strong>Mobile:</strong> React Native, Expo, Hooks, Router</div>
+      <div class="card"><strong>State Management:</strong> Redux, Context API</div>
+      <div class="card"><strong>Database:</strong> Firebase Realtime & Firestore</div>
+      <div class="card"><strong>Tools:</strong> Git, GitHub, Figma, Postman, VS Code, Android Studio</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>E-commerce Mobile App</strong><br>
+        Built with React Native, Redux, and REST APIs. Features include login/signup, product listing, cart, and payment.
+      </div>
+      <div class="card">
+        <strong>Weather App</strong><br>
+        Used React Native and OpenWeatherMap API to show live weather updates based on user location.
+      </div>
+      <div class="card">
+        <strong>To-Do List App</strong><br>
+        A productivity app built using React Native with features like add, edit, delete, and persistent storage.
+      </div>
+      <div class="card">
+        <strong>Movie Rating Checker</strong><br>
+        React Native app fetching ratings from a movie API. Integrated search and clean UI.
+      </div>
+      <div class="card">
+        <strong>News App</strong><br>
+        Used React Native and News API to display trending articles with category filters.
+      </div>
+      <div class="card">
+        <strong>Java Console Applications</strong><br>
+        CLI tools including Attendance Manager, Banking System, and Car Rental System.
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Android Development – PG Tech, Chandigarh</li>
+      <li>Advanced Java – CodeChef</li>
+      <li>HTML & CSS – LetsUpgrade</li>
+      <li>JavaScript – Simplilearn</li>
+      <li>SQL Fundamentals – LeetCode</li>
+      <li>Software Testing – Simplilearn</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:akashkarkhal.23@gmail.com">akashkarkhal.23@gmail.com</a></p>
+    <p>Phone: 8699546461</p>
+    <p>Location: Gurugram, Haryana, India</p>
+    <p>
+      <a href="#">GitHub</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">Portfolio</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Akashdeep Singh. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
